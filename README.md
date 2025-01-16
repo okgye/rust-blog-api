@@ -24,7 +24,17 @@ This repository contains the backend API for a modern blog platform. Built using
 ---
 
 ## 📂 Project Structure
-src/ ├── main.rs # Entry point for the application ├── routes/ # Handlers and routes for API endpoints │ ├── mod.rs # Module definitions for routes │ ├── posts.rs # Routes for managing blog posts │ ├── users.rs # Routes for user authentication ├── db.rs # Database connection setup ├── models.rs # Structs and types for database models ├── errors.rs # Custom error handling migrations/ # SQL migrations for the PostgreSQL database .env # Environment variables (e.g., DATABASE_URL)
+src/
+├── main.rs           # Entry point for the application
+├── routes/           # Handlers and routes for API endpoints
+│   ├── mod.rs        # Module definitions for routes
+│   ├── posts.rs      # Routes for managing blog posts
+│   ├── users.rs      # Routes for user authentication
+├── db.rs             # Database connection setup
+├── models.rs         # Structs and types for database models
+├── errors.rs         # Custom error handling
+migrations/           # SQL migrations for the PostgreSQL database
+.env                  # Environment variables (e.g., DATABASE_URL)
 
 ---
 
