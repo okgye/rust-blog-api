@@ -24,6 +24,7 @@ This repository contains the backend API for a modern blog platform. Built using
 ---
 
 ## 📂 Project Structure
+```plaintext
 src/
 ├── main.rs           # Entry point for the application
 ├── routes/           # Handlers and routes for API endpoints
@@ -35,7 +36,7 @@ src/
 ├── errors.rs         # Custom error handling
 migrations/           # SQL migrations for the PostgreSQL database
 .env                  # Environment variables (e.g., DATABASE_URL)
-
+```
 ---
 
 ## 📋 API Endpoints
