@@ -77,7 +77,6 @@ This backend is designed to be deployed using **Shuttle**:
 3. Deploy the app:
    ```bash
    cargo shuttle deploy
-
 ---
 
 ## 🤝 Contributing
