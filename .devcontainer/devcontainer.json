@@ -1,11 +1,16 @@
 {
-    "name": "Rust Dev Environment",
-    "image": "mcr.microsoft.com/devcontainers/rust:bullseye",
-    "customizations": {
-      "vscode": {
-        "extensions": ["rust-lang.rust-analyzer"]
-      }
-    },
-    "postCreateCommand": "rustup update && cargo install cargo-watch"
-  }
-  
+  "name": "Rust Dev Environment",
+  "image": "mcr.microsoft.com/devcontainers/rust:bullseye",
+  "features": {
+    "docker-in-docker": "latest"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "rust-lang.rust-analyzer",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  },
+  "postCreateCommand": "rustup update && cargo install cargo-watch"
+}
