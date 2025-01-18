@@ -1,13 +1,17 @@
 use sqlx::PgPool;
+use dotenvy::dotenv;
+use std::env;
 
 #[tokio::main]
 async fn main() {
-    // Replace with your actual database URL
-    let database_url = "postgres://postgres:your_password@172.18.0.2:5432/your_database";
+    if dotenv().is_err() {
+        println!("⚠️  .env file not found or not loaded.");
+    }
+
+    let database_url = env::var("DATABASE_URL").expect("DATABASE_URL must be set");
 
     println!("⏳ Attempting to connect to the database...");
 
-    // Create a connection pool
     match PgPool::connect(&database_url).await {
         Ok(pool) => {
             println!("✅ Successfully connected to the database!");
